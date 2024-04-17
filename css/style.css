@@ -1,0 +1,513 @@
+/*CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* To be Named */
+body, html {
+    font-size: 16px; /* Base font size */
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    background: #FFFFFF;
+}
+
+/* Header styles (Logo, Navbar and Search Quotes Box) */
+header {
+    background-color: white; 
+    color: black;
+    padding: 10px 0;
+	display: flex;
+	
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px 20px;
+    max-width: 1200px;
+	max-height: 90px;
+}
+
+.logo-container { 
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	margin: 0;
+}
+
+.logo-container img {		
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+    height: auto; 
+    width: 200px;
+}
+
+.site-name {
+    color: black;
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.site-nav ul {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.site-nav ul li {
+    padding: 0 20px;
+}
+
+.site-nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+	
+}
+
+.site-nav ul li a:hover,
+.site-nav ul li a:active {
+    text-decoration: underline;
+}
+
+.search-form {
+    display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.search-form input[type="text"],
+.search-form button {
+    padding: 5px;
+}
+
+.search-form input[type="text"] {
+    margin-right: 5px;
+}
+
+.search-form button {
+    background-color: white;
+    /* color: #0047ab; */
+    border: 1px solid #0047ab;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #003366;
+    border-color: #003366;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    background: white;
+}
+
+/* CSS for Daily Quote Task 2 */
+
+
+/* Quote box styles */
+#daily-quote blockquote {
+    font-family: 'Neuton', serif; /* Main font for quote */
+    background-color: turquoise; /* Specific color based on the example provided */
+    border-radius: 20px; /* Rounded corners for the blockquote */
+    padding: 40px; /* Spacing inside the quote box */
+    margin: 40px auto; /* Center the blockquote and add space above and below */
+    max-width: 700px; /* Max width of the quote box */
+    position: relative; /* For absolute positioning of pseudo-elements */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Quote text styles */
+#daily-quote blockquote p {
+    color: black; /* Dark teal color for the text */
+    font-size: 24px; /* Size of the quote text */
+    line-height: 1.5; /* Spacing between lines */
+    margin: 0 0 20px 0; /* Remove default margin and add space before the author */
+    font-family: 'Neuton', serif; /* Ensuring the quote text has the correct font */
+}
+
+/* Quote author styles */
+#daily-quote blockquote p:last-child {
+    font-family: 'Bebas Neue', cursive; /* Font for the author */
+    font-size: 20px; /* Size of the author text */
+    text-align: right; /* Align the author to the right */
+    margin-top: 20px; /* Space between the quote and the author */
+    color: black; /* Dark teal color for the author text */
+    font-weight: bolder;
+}
+
+/* Quotation marks - adjust size, position, and color as needed */
+#daily-quote blockquote p::before,
+#daily-quote blockquote p::after {
+    font-family: 'Bebas Neue', cursive; /* Font for quotation marks */
+    font-size: 50px; /* Size of quotation marks */
+    position: absolute; /* Absolute position */
+    color: lightslategray; /* Light grey color for quotation marks */
+}
+
+#daily-quote blockquote p::before {
+    content: '“'; /* Open quote */
+    top: 0; /* Positioning above the quote */
+    left: 20px; /* Positioning before the quote */
+}
+
+#daily-quote blockquote p::after {
+    content: '”'; /* Close quote */
+    bottom: 0; /* Positioning below the quote */
+    right: 20px; /* Positioning after the quote */
+}
+
+  
+
+
+/* Features section */
+#features {
+    padding: 20px;
+    background-color: white;
+}
+
+#features ul {
+    list-style: none;
+    padding: 0;
+}
+
+#features ul li::before {
+    content: '✓';
+    margin-right: 8px;
+    color: green;
+}
+
+/* Footer styles */
+
+footer {
+	background-color: #EDF0F4; /* Footer background color */
+	color: black; /* Footer text color */
+	padding: 20px 0px;
+	font-size: 0.8rem; /* Adjust text size as needed */
+	
+  }
+  
+  .footer-container {
+	display: flex;
+	justify-content: space-around; /* This will spread the sections out evenly */
+	align-items: start; /* Aligns content to the top */
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+  }
+  
+  .footer-section h3 {
+	margin-bottom: 10px; /* Space between the heading and the list */
+  }
+  
+  .footer-section ul {
+	list-style: none; /* Removes the default list styling */
+	padding: 0; /* Removes the default padding */
+	text-align: left;
+  }
+  
+  
+  
+  .footer-bottom {
+	text-align: center; /* Centers the content */
+	margin-top: 30px; /* Space between sections and bottom content */
+  }
+  
+
+/* Media Queries For Responsive and Mobile Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+		max-height: 80px;
+    }
+
+    .logo-container,
+    .site-nav,
+    .search-form {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-nav ul li {
+        margin: 10px 0;
+    }
+
+	/* Footer styles for smaller screens */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        margin-bottom: 20px; /* Adds space between stacked sections */
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Add styles for .social-media-links or any other classes here */
+
+
+}
+
+
+/* Store Name Form Styles */
+#store-name-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text */
+}
+
+#store-name-form h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#store-name-form p {
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+#store-name-form .form-group {
+    margin-bottom: 20px; /* Space below each form group */
+}
+
+#store-name-form label {
+    display: block; /* Ensure the label takes up the full width */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+#store-name-form input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    border-radius: 5px; /* Rounded corners on the input */
+    border: 1px solid #ccc; /* Light grey border */
+}
+
+#store-name-form .submit-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase; /* Uppercase text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+#store-name-form .submit-button:hover {
+    background-color: #45a049;
+}
+
+
+
+/* addScores Page */
+
+/* Wellbeing form styles */
+.wellbeing-form-container {
+    background-color: #f4f4f4; /* Adjust the background color as needed */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.wellbeing-form-container h2 {
+    margin-bottom: 20px;
+}
+
+.question-container {
+    margin-bottom: 10px;
+}
+
+.question-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px; /* Adjust width */
+}
+
+.options label {
+    background-color: #e0e0e0; /* Adjust button color as needed */
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer;
+    display: inline-block; /* Ensures the label is properly clickable */
+    margin: 0px 5px; /* Adds space between buttons */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for visual feedback */
+}
+
+.options input[type="radio"] {
+    background-color: #ccc; /* Hide the default radio button */
+}
+
+.options input[type="radio"]:checked + label {
+    background-color: #0047ab; /* Highlight color for selected option */
+    color: white;
+
+}
+
+/* Submit button style */
+.submit-button {
+    background-color: #ccc; /* Change button color */
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #4cae4c; /* Darker shade for hover effect */
+}
+
+/* Wellbeing score container styles */
+.wellbeing-score-container {
+    background-color: #ffffff; /* White background for score section */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.wellbeing-score-container h2,
+.more-help-section h2 {
+    margin-bottom: 10px;
+}
+
+/* More help section styles */
+.more-help-section {
+    background-color: #f4f4f4; /* Adjust background color */
+    padding: 20px;
+}
+
+/* Add styles for more help and support cards here */
+
+
+/* quoteSearch Page */
+.quote-search-main {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.search-container {
+    margin: 20px auto;
+    position: relative;
+    max-width: 600px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#search-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: #0047ab;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#quote-results {
+    margin-top: 20px;
+}
+
+.quote-result-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.quote-result-item p {
+    margin: 0;
+    color: #333;
+}
+
+.quote-result-item footer {
+    margin-top: 5px;
+    text-align: right;
+    color: #EDF0F4;
+}
+/* Add other styles for responsiveness and aesthetics */
+
+
+
+
+
+/* Graph Page */
+
+  /* Main content area styling */
+  main.graph-main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+  }
+  
+  /* Titles and text */
+  h1 {
+    color: black; /* Adjust the color */
+    margin-bottom: 20px;
+  }
+  
+  /* Footer styling */
+  
+  
+  /* Specific class for the chart container */
+  #wellbeing-chart {
+    padding: 15px;
+    background-color: #fff; /* White background for the chart area */
+    border: 1px solid #ccc; /* Light grey border around the chart */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* light shadow for depth */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    main.graph-main {
+      width: 95%;
+      padding: 10px;
+    }
+  
+    /* Add more responsive styles */
+  }
+  
+  /* Add more styles needed for other elements
+  
